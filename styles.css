@@ -1,35 +1,43 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root {
+    --bg: #0b2a1a;
+    --panel: rgba(255, 255, 255, 0.05);
+    --text: #e6f7ef;
 }
 
 html,
 body {
     height: 100%;
-    font-family: Arial, sans-serif;
-    background: #0b2b0b;
-    color: #fff;
+    margin: 0;
+    font-family: Inter, Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg, #072217 0%, #052015 100%);
+    color: var(--text);
 }
 
-#game-wrap {
+#wrap {
+    height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 12px;
-    gap: 8px;
+    justify-content: center;
+    gap: 16px;
+    flex-direction: column;
+    padding: 24px;
+    box-sizing: border-box;
 }
 
 canvas {
-    background: linear-gradient(#87ceeb, #6ecb5f);
-    border: 4px solid #183;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    background: var(--panel);
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
 }
 
 #hud {
-    width: 900px;
-    display: flex;
-    justify-content: space-between;
-    padding: 6px 10px;
-    font-weight: 600;
+    font-size: 16px;
+    color: var(--text);
+}
+
+@media (max-width: 1000px) {
+    canvas {
+        width: 90vw;
+        height: calc(90vw * 540 / 960);
+    }
 }
