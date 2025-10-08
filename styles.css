@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: #0b2b0b;
+    color: #fff;
+}
+
+#game-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    gap: 8px;
+}
+
+canvas {
+    background: linear-gradient(#87ceeb, #6ecb5f);
+    border: 4px solid #183;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+#hud {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+    font-weight: 600;
+}
